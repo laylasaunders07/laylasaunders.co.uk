@@ -1,1 +1,51 @@
-test page
+<!-- Layla Saunders, 20/03/2026 -->
+<!-- © wtfpl (www.wtfpl.net) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css" />
+	<title>title! - Layla</title>
+</head>
+<body>
+<main>
+        <h1>
+            header!
+        </h1>
+        <p><i><span id="counter">loading</span> hits, last updated: 20th march 2026, <b>still niche</b></i></p>
+        <br><br><br><br>
+        <h2>
+            subtitle!
+        </h2>
+        <p>
+            <i>for more about me go to 
+                <b><a href="https://layla.lol">layla.lol</a></b> 
+                & for my other sites go to 
+                <b><a href="https://laylasaunders.co.uk">laylasaunders.co.uk</a></b> 
+                <3</i><br><br>
+            main site explination text!<br><br>
+            <i><b>"quote!"</b><br>
+            -author!, year!</i><br><br>
+        </p>
+        <h2>
+            subsection
+        </h2>
+        <p>
+            text!
+        </p>
+</main>
+</body>
+<script>
+fetch("https://counter.silly-7f7.workers.dev/increment/sitex")
+    .then(res => res.json())
+    .then(data => {
+    document.getElementById("counter").textContent = data.count;
+    })
+    .catch(err => {
+    console.error(err);
+    document.getElementById("counter").textContent = "—";
+    });
+</script>
+</html>
