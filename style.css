@@ -1,0 +1,21 @@
+/* Layla Saunders, 18/03/2026 */
+/* © wtfpl (www.wtfpl.net) */
+
+/* variables */
+
+:root {
+  --background: #ff9aab;
+}
+
+/* main styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    background-color: var(--background);
+}
+
+main {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
