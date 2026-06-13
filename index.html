@@ -36,6 +36,7 @@
             its not intended for every single thing to be viewed its meant more as an experience, you get the 
             general idea even if not 100% of the content. youll understand when you visit aha :)
         </p>
+		<p><i><span id="counter-layla.lol">loading</span> views</i></p>
         <h2>
             <a href="https://laylasaunders.co.uk">laylasaunders.co.uk</a>
         </h2>
@@ -46,6 +47,7 @@
             <b>your here right now!!!</b> this is just a collection of all my websites with some potentially 
             intersting details on it :) if your looking for a site or project youll find it here!
         </p>
+		<p><i><span id="counter-laylasaunders.co.uk">loading</span> views</i></p>
         <h2>
             <a href="https://4k.lc">4k.lc</a>
         </h2>
@@ -62,6 +64,7 @@
             always posting month old events 😭 but yea if you want to see my photos go here :) i dont often post 
             them anywhere else so this and my photos app are the main homes of my photography
         </p>
+		<p><i><span id="counter-4k.lc">loading</span> views</i></p>
         <h2>
             <a href="https://looseleafmarketing.laylasaunders.co.uk">looseleafmarketing.laylasaunders.co.uk</a>
         </h2>
@@ -117,6 +120,7 @@
             <b>this is the template i use when i dont want to put effort into making a new website!</b> it keeps my 
             pages consistent as well as sorts all the annoying html stuff at the start of making a website...
         </p>
+		<p><i><span id="counter-template.layla.lol">loading</span> views</i></p>
         <h2>
             <a href="https://dev.layla.lol">dev.layla.lol</a>
         </h2>
@@ -190,6 +194,47 @@ fetch("https://counter.silly-7f7.workers.dev/increment/laylasaunders.co.uk")
     .catch(err => {
     console.error(err);
     document.getElementById("counter").textContent = "—";
+    });
+
+fetch("https://counter.silly-7f7.workers.dev/value/layla.lol")
+    .then(res => res.json())
+    .then(data => {
+    document.getElementById("counter-layla.lol").textContent = data.count;
+    })
+    .catch(err => {
+    console.error(err);
+    document.getElementById("counter-layla.lol").textContent = "—";
+    });
+
+fetch("https://counter.silly-7f7.workers.dev/value/laylasaunders.co.uk")
+    .then(res => res.json())
+    .then(data => {
+    document.getElementById("counter-laylasaunders.co.uk").textContent = data.count;
+    })
+    .catch(err => {
+    console.error(err);
+    document.getElementById("counter-laylasaunders.co.uk").textContent = "—";
+    });
+
+
+fetch("https://counter.silly-7f7.workers.dev/value/4k.lc")
+    .then(res => res.json())
+    .then(data => {
+    document.getElementById("counter-4k.lc").textContent = data.count;
+    })
+    .catch(err => {
+    console.error(err);
+    document.getElementById("counter-4k.lc").textContent = "—";
+    });
+
+fetch("https://counter.silly-7f7.workers.dev/value/template.layla.lol")
+    .then(res => res.json())
+    .then(data => {
+    document.getElementById("counter-template.layla.lol").textContent = data.count;
+    })
+    .catch(err => {
+    console.error(err);
+    document.getElementById("counter-template.layla.lol").textContent = "—";
     });
 </script>
 </html>
