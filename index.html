@@ -14,7 +14,7 @@
         <h1>
             layla's websites!!
         </h1>
-        <p><i><span id="counter">loading</span> hits, last updated: 23rd march 2026, <b>still niche</b></i></p>
+        <p><i><span id="counter">loading</span> hits, last updated: 14th june 2026, <b>still niche</b></i></p>
         <br><br><br><br>
         <h2>
             all my urls in one place !
@@ -48,6 +48,18 @@
             intersting details on it :) if your looking for a site or project youll find it here!
         </p>
 		<p><i><span id="counter-laylasaunders.co.uk">loading</span> views</i></p>
+		<h2>
+            <a href="https://girlcroosh.com">girlcroosh.com</a>
+        </h2>
+        <h3>
+            girl croosh
+        </h3>
+        <p>
+            <b>this is girl croosh!</b> its a niche reference from bojack horseman that i recreated because i 
+			have too much free time, if you're interested click on the icon or click about in the footer and it 
+			will explain both the fake and the real backstory of the site! its very niche though!! <3
+        </p>
+		<p><i><span id="counter-girlcroosh.com">loading</span> views</i></p>
         <h2>
             <a href="https://4k.lc">4k.lc</a>
         </h2>
@@ -65,6 +77,46 @@
             them anywhere else so this and my photos app are the main homes of my photography
         </p>
 		<p><i><span id="counter-4k.lc">loading</span> views</i></p>
+		<!--<h2>
+            <a href="https://layla.fyi">layla.fyi</a>
+        </h2>
+        <h3>
+            layla's rss feed
+        </h3>
+        <p>
+            <b>this is my rss feed!</b> add it to keep updated when new niche websites drop, its mostly for 
+			me tbh i don't expect anyone to be subscribing and ringing the bell on the internet lol but feel 
+			free! since i don't really post my sites on other socials.<br>
+			this is unfinished and commented out. stop checking my source code!!
+        </p>
+		<p><i><span id="counter-layla.fyi">loading</span> views</i></p>
+		<h2>
+            <a href="https://layla.wiki">layla.wiki</a>
+        </h2>
+        <h3>
+            layla's super niche wiki
+        </h3>
+        <p>
+            <b>this is my wiki!</b> there's no reason to really go on here i mostly just made this to link 
+			to people in super niche conversations. but i guess you can go on here if you want to stalk me!!<br>
+			this is unfinished and commented out. stop checking my source code!!
+        </p>
+		<p><i><span id="counter-layla.wiki">loading</span> views</i></p>-->
+			<h2>
+            <a href="https://itgirl.lol">itgirl.lol</a>
+        </h2>
+	    <p>
+            other sites: 
+            <a href="https://say.itgirl.lol">say.itgirl.lol</a>
+			<a href="https://show.itgirl.lol">show.itgirl.lol</a>
+        </p>
+        <h3>
+            say it girl! (.lol)
+        </h3>
+        <p>
+            <b>edit</b> edit
+        </p>
+		<p><i><span id="counter-itgirl.lol">loading</span> views</i></p>
         <h2>
             <a href="https://looseleafmarketing.laylasaunders.co.uk">looseleafmarketing.laylasaunders.co.uk</a>
         </h2>
@@ -216,7 +268,46 @@ fetch("https://counter.silly-7f7.workers.dev/value/laylasaunders.co.uk")
     document.getElementById("counter-laylasaunders.co.uk").textContent = "—";
     });
 
+fetch("https://girlcroosh.silly-7f7.workers.dev/value/%2Fcrooshfeed%2F")
+    .then(res => res.json())
+    .then(data => {
+    document.getElementById("counter-girlcroosh.com").textContent = data.count;
+    })
+    .catch(err => {
+    console.error(err);
+    document.getElementById("counter-girlcroosh.com").textContent = "—";
+    });
 
+fetch("https://counter.silly-7f7.workers.dev/value/layla.fyi")
+    .then(res => res.json())
+    .then(data => {
+    document.getElementById("counter-layla.fyi").textContent = data.count;
+    })
+    .catch(err => {
+    console.error(err);
+    document.getElementById("counter-layla.fyi").textContent = "—";
+    });
+
+fetch("https://counter.silly-7f7.workers.dev/value/layla.wiki")
+    .then(res => res.json())
+    .then(data => {
+    document.getElementById("counter-layla.wiki").textContent = data.count;
+    })
+    .catch(err => {
+    console.error(err);
+    document.getElementById("counter-layla.wiki").textContent = "—";
+    });
+
+fetch("https://counter.silly-7f7.workers.dev/value/itgirl.lol")
+    .then(res => res.json())
+    .then(data => {
+    document.getElementById("counter-itgirl.lol").textContent = data.count;
+    })
+    .catch(err => {
+    console.error(err);
+    document.getElementById("counter-itgirl.lol").textContent = "—";
+    });
+	
 fetch("https://counter.silly-7f7.workers.dev/value/4k.lc")
     .then(res => res.json())
     .then(data => {
